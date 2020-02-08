@@ -1,8 +1,10 @@
-// Rual code
+
+// Raul code
 //Client ID
 //vLPrgG6PXNrL_cpL4E8SjA
 //yelp API key
 //yFGA5vRwWDXaOq0f6KaNtexkN5JjC-Bnl1X5kcfX2WLDLfyMbbtwfD9XoTF8cC8KqaWLwuaJ4fnRUJCNDmtEfB6IyvwTJtRvLeHF_gpMms8ZIRycX52NLnUkFOY-XnYx
+
 
 var city=$("#city").val();
 
