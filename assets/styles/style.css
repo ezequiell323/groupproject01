@@ -21,17 +21,29 @@ P{
 
 }
 .container{
+<<<<<<< HEAD
+    
+=======
      
+>>>>>>> beec331698b8a9bd169e79d40e75cdb587599982
     text-align: center;
     background-color: black;
   }
 
  
   .center {
+<<<<<<< HEAD
+    
+=======
+>>>>>>> beec331698b8a9bd169e79d40e75cdb587599982
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+<<<<<<< HEAD
+    
+=======
+>>>>>>> beec331698b8a9bd169e79d40e75cdb587599982
   }
  
   .card-img-top{
