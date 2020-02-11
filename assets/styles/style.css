@@ -3,6 +3,14 @@ body {
   padding: 50px;
  
 }
+
+#navbar {
+  background: transparent!important;
+
+}
+#navbar button {
+  margin-right: 10px;
+}
 .capital{
   width: auto;
 }
@@ -10,6 +18,7 @@ body {
 h1{
   color:white;
 text-align: center;
+margin-bottom: 40px;
 }
 
 h5{
@@ -21,29 +30,19 @@ P{
 
 }
 .container{
-<<<<<<< HEAD
     
-=======
-     
->>>>>>> beec331698b8a9bd169e79d40e75cdb587599982
     text-align: center;
     background-color: black;
   }
 
  
   .center {
-<<<<<<< HEAD
     
-=======
->>>>>>> beec331698b8a9bd169e79d40e75cdb587599982
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-<<<<<<< HEAD
     
-=======
->>>>>>> beec331698b8a9bd169e79d40e75cdb587599982
   }
  
   .card-img-top{
@@ -53,4 +52,10 @@ P{
 
   .card-body{
     background-color: black;
+    height: 250px;
+  }
+
+  .card-text {
+    height: 120px;
+    overflow: hidden;
   }
