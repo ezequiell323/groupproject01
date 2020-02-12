@@ -17,27 +17,27 @@ $.ajax({
     }
   }).then(function(response) {
     console.log(response)
+    or (var i = 0; i < response.length; i++) {
     
-    $("#firstSpot").html('<p>Business location: '+response.businesses[1].name+'</p>');
+    $
+
+
+
+
+
+
+
+
+
+
+
+
+     /* $("#firstSpot").html('<p>Business location: '+response.businesses[1].name+'</p>');
       console.log(response.businesses[1].name[1]);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       
-    //$("#secondSpot").html('<p>Business location: '+response.businesses[2].name+'</p>');
-     // console.log(response.businesses[2].name[1]);
+    $("#secondSpot").html('<p>Business location: '+response.businesses[2].name+'</p>');
+      console.log(response.businesses[2].name[1]);
 
 
 
