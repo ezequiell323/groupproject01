@@ -17,15 +17,15 @@ $.ajax({
     }
   }).then(function(response) {
     console.log(response);
-    //for (var i = 0; i < response.length; i++) {
+    for (var i = 0; i < response.businesses.length; i++) {
      
      
       var newtitle =$("<h2>");
-      newtitle.html(response.businesses[0].name);
+      newtitle.html(response.businesses[i].name);
       var locAddress =$("<h4>");
-      locAddress.html(response.businesses[0].location.address1);
+      locAddress.html(response.businesses[i].location.address1);
       var telPhone =$("<p>");
-      telPhone.html(response.businesses[0].display_phone);
+      telPhone.html(response.businesses[i].display_phone);
      
       $("body").append(newtitle);
       $("body").append(locAddress);
@@ -34,7 +34,7 @@ $.ajax({
       
      
 
-    //};
+  };
   });
     /*
       <div class="col mb-3">
