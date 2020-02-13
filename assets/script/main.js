@@ -8,7 +8,7 @@
 
 var city=$("#city").val();
 
-var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=pizza&location="+city;
+/*var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=pizza&location="+city;
 
 $.ajax({
     url: queryURL,
@@ -21,6 +21,17 @@ $.ajax({
     console.log(response)
 
    
-  });
+  });*/
+
+  /*var nearMe=$("#nearMe").val();
+  
+  var queryURL = "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyAArLRcjMwDEg6yy931-8hb6513eD-V1LY"
+
+  $.ajax({
+    url: queryURL,
+    method: "GET",
+  }).then(function(response) {
+
+    console.log(response)})*/
 
 //Jose code
