@@ -11,6 +11,40 @@ body {
 #navbar button {
   margin-right: 10px;
 }
+
+#navbar button:hover {
+  background-color: orange;
+  outline-color: orange;
+}
+
+.btn-outline-success {
+  color: orange ;
+  border-color: orange !important;
+}
+
+
+#nearMeIcon {
+  color: orange;
+  height: 25px;
+  width: 25px;
+  margin-bottom: 7px;
+  
+}
+
+#footer{
+color: white;
+}
+
+#footer1{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+}
+
 .capital{
   width: auto;
 }
@@ -58,4 +92,14 @@ P{
   .card-text {
     height: 120px;
     overflow: hidden;
+  }
+
+  .footer {
+    
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    text-align: center;
   }
