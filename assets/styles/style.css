@@ -3,6 +3,48 @@ body {
   padding: 50px;
  
 }
+
+#navbar {
+  background: transparent!important;
+
+}
+#navbar button {
+  margin-right: 10px;
+}
+
+#navbar button:hover {
+  background-color: orange;
+  outline-color: orange;
+}
+
+.btn-outline-success {
+  color: orange ;
+  border-color: orange !important;
+}
+
+
+#nearMeIcon {
+  color: orange;
+  height: 25px;
+  width: 25px;
+  margin-bottom: 7px;
+  
+}
+
+#footer{
+color: white;
+}
+
+#footer1{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+}
+
 .capital{
   width: auto;
 }
@@ -10,6 +52,7 @@ body {
 h1{
   color:white;
 text-align: center;
+margin-bottom: 40px;
 }
 
 h5{
@@ -21,17 +64,19 @@ P{
 
 }
 .container{
-     
+    
     text-align: center;
     background-color: black;
   }
 
  
   .center {
+    
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    
   }
  
   .card-img-top{
@@ -41,4 +86,20 @@ P{
 
   .card-body{
     background-color: black;
+    height: 250px;
+  }
+
+  .card-text {
+    height: 120px;
+    overflow: hidden;
+  }
+
+  .footer {
+    
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    text-align: center;
   }
