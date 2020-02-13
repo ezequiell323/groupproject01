@@ -1,6 +1,6 @@
 //var city=$("#city").val();
 //var zipCode=$("#zipCode").val();
-var city="miami";
+var city="new york";
 var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=burgers&location="+city;
 
 $.ajax({
@@ -25,8 +25,9 @@ $.ajax({
   });
 
 //Jose code
+var city="city";
 
-var queryURL="https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=334&apikey=cCh76O7Ve0ZGF8uXq89VksBzFEZGrmOt";
+var queryURL="https://app.ticketmaster.com/discovery/v2/events.json?city="+city+"&apikey=cCh76O7Ve0ZGF8uXq89VksBzFEZGrmOt";
 
     // From TicketMaster's API page:
     $.ajax({
