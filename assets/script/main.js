@@ -1,6 +1,6 @@
 //var city=$("#city").val();
 var city="miami";
-var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=pizza&location="+city;
+var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=burgers&location="+city;
 
 $.ajax({
     url: queryURL,
@@ -11,21 +11,15 @@ $.ajax({
   }).then(function(response) {
     console.log(response);
     for (var i = 0; i < response.businesses.length; i++) {
-     
-        var card=$("<div>").attr("class","cardDiv")
-      
-        
-              var newtitle =$("<h2>");
-              newtitle.html(response.businesses[i].name);
-              var locAddress =$("<h4>");
-              locAddress.html(response.businesses[i].location.address1);
-              var telPhone =$("<p>");
-              telPhone.html(response.businesses[i].display_phone);
-              var busPicture=$('<img id="dynamic">')
-              busPicture.attr('src', response.businesses[i].image_url);
-      card.append(newtitle,locAddress,telPhone,busPicture)
-      
-      $("body").append(card);
+  
+     //Create variables to reference in code below
+      var image = response.businesses[i].image_url;
+      var name = response.businesses[i].name;
+      var address = response.businesses[i].location.address1;
+      var telephone = response.businesses[i].display_phone;
+
+      //Create Master Element and Append to container
+      $(".containerRow").append(" <div class='col-4 mb-3'> <div class='card'> <img height='300' width='auto' src='"+ image + "'class='card-img-top alt='...'> <div class='card-body'><h5 id='firstSpot'class='card-title'>" + name + "</h5><p  class='card-text'>" + address + " " + telephone + "</p><a href='#' class='btn btn-warning'>Go somewhere</a></div> </div></div>");
   };
   });
 
