@@ -1,6 +1,13 @@
+$(".main.js").hide();
+$("#landPageHolder").click(function(){
+  event.preventDefault();
+  $(this).hide();
+});
+
+
 //var city=$("#city").val();
 //var zipCode=$("#zipCode").val();
-var city="new york";
+var city="miami";
 var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=burgers&location="+city;
 
 $.ajax({
@@ -24,7 +31,7 @@ $.ajax({
   };
 });
 //Eze code
-var x = document.getElementById("nearMe");
+/*var x = document.getElementById("nearMe");
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
@@ -39,15 +46,15 @@ function showPosition(position) {
   latlong = position.coords.latitude + position.coords.longitude;
 
   city = "";
-
+*/
 //Jose code
-var city="city";
+var city="miami";
 
-if (city) {
-  var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=334&apikey=cCh76O7Ve0ZGF8uXq89VksBzFEZGrmOt&city=" + city;
-} else {
-  var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=334&apikey=cCh76O7Ve0ZGF8uXq89VksBzFEZGrmOt&latlong=" + latlong;
-}
+//if (city) {
+  var queryURL="https://app.ticketmaster.com/discovery/v2/events.json?city="+city+"&apikey=cCh76O7Ve0ZGF8uXq89VksBzFEZGrmOt";
+//} else {
+//  var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=334&apikey=cCh76O7Ve0ZGF8uXq89VksBzFEZGrmOt&latlong=" + latlong;
+//}
 
 // From TicketMaster's API page:
 $.ajax({
@@ -73,6 +80,6 @@ $.ajax({
 
 })
 
-
+//getLocation()
 
 
