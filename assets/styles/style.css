@@ -84,6 +84,40 @@ P{
      border-color: orange;
   }
 
+  #citySubmit{
+    border: none;
+  }
+
+  #nearMe1{
+    border: none;
+  }
+
+  #submitBtn{
+    width: 100%;
+    margin-top: 20px;
+    color: orange;
+    background-color: black;
+    border-color: orange;
+  }
+  
+  #submitBtn:hover{
+    color: white;
+    background-color: orange;
+  }
+
+  #nearMeBtn{
+    width: 100%;
+    margin-top: 20px;
+    color: orange;
+    background-color: black;
+    border-color: orange;
+  }
+
+  #nearMeBtn:hover{
+    color: white;
+    background-color: orange;
+  }
+
   .card-body{
     background-color: black;
     height: 250px;
