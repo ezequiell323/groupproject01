@@ -1,5 +1,5 @@
 <html lang="en">
-  <head>
+  <head>≠≠
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,44 +13,64 @@
     <!--LOGO-->
     <img class="center" src="assets/images/skyline.png"  alt="skyline">
 
-    
-    <div class="container">
-        <div class="row">
-            <div class="col-12 ">
-             <h1>Event Splash</h1>
-            </div>
-      <!--USER INPUT CITY-->
-            <div class="col-12 ">
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="City" aria-label="Recipient's username" aria-describedby="button-addon2" id="city">
-               
+    <div id="landPageHolder">
+      <div  class="container">
+          <div class="row">
+              <div class="col-12 ">
+              <h1>Event Splash</h1>
               </div>
-           </div>
-      <!--USER INPUT ZIP CODE-->
-           <div class="col-12 ">
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="Zip Code" aria-label="Recipient's username" aria-describedby="button-addon2" id="zipCode">
-             
+          </div>
+      </div>
+      <!--USER INPUT CITY-->
+      <div  class="container">
+        <div class="row">
+            <div class="offset 1 col-xl-6 col-lg-6 col-md-6 col-6">
+              <div class=" input-group mb-3">
+                <button type="button" class="btn btn-warning btn-lg btn-block" id="searchCity" onclick="">Search City</button>
+              </div>
             </div>
-         </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-6">
+                  <button type="button" class="btn btn-warning btn-lg btn-block" id="nearMe" onclick="">Near Me</button>
+              </div>
+            </div>
+          </div>
+      </div>
+
+        <br>
+
+        <div id="searchCityholder">
+          <div class="offset-2 col-8 offset-2">
+              <div class="input-group mb-3">
+                <input id="cityInput" type="text" class="form-control" placeholder="City" aria-label="Recipient's username" aria-describedby="button-addon2" id="city">
+                <div class="input-group-append">
+                  <button class="btn btn-warning btn-outline-secondary" type="button" id="findCity">Submit</button>
+                </div>
+              </div>
+           </div> 
+       
+      <!--NEAR ME-->         
+             
+           
+      </div>
+     
       <!--NEAR ME-->
-         <div class="container">
-         <div class="row">
-          <div class="col-xl-6 col-lg-6 col-md-6 col-6">
-            <button type="button" class="btn btn-warning btn-lg btn-block" id="nearMe" onclick="getLocation()">Near Me</button>
-           
-          </div>
-          <div class="col-xl-6 col-lg-6 col-md-6 col-6">
-            <button type="button" class="btn btn-warning btn-lg btn-block" id="submit">Submit</button>
-           
-          </div>
-        </div>
+    </div>  
   </div>
-  <div class="row containerRow">
+<h1>Ticket Master</h1>
 
+  <div class="row containerRow"></div>
+  
 
 
   </div>
+
+  <h1>Yelp</h1>
+  
+  <div class="row containerRowTwo"></div>
+  
+
+
+</div>
 
          <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
