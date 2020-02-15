@@ -15,13 +15,15 @@
 
     
     <div class="container">
-        <div class="row">
-            <div class="col-12 ">
-             <h1>Event Splash</h1>
-            </div>
+      <div class="row">
+        <div class="col-12 ">
+          <h1>Event Splash</h1>
+        </div>
+      </div>
       <!--USER INPUT CITY-->
       <div id="" class="row">
-        <div class="col-xl-6 col-lg-6 col-md-6 col-6">
+        <div class="col-2"></div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-4">
           <div id="citySubmit" class="card">
             <div class="card-body">
               <input type="text" class="form-control" placeholder="Zip Code" aria-label="Recipient's username" aria-describedby="button-addon2" id="zipCode">
@@ -29,21 +31,21 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-6 col-lg-6 col-md-6 col-6">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-4">
           <div id="nearMe1" class="card">
             <div class="card-body">
               <input class="form-control" type="text" placeholder="Near Me" readonly>
-              <a id="nearMeBtn" href="#" class="btn btn-primary">Near Me</a>
+              <button onclick="getLocation()" type="button" class="btn btn-warning btn-block" id="nearMe">Near Me</button>
             </div>
           </div>
         </div>
       </div>
-      
+    </div>
     
 
      
      
-      </div>
+      
          <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -57,9 +59,6 @@
     </div>
 
   </body>
-
- 
-  <br>
   
 
 
