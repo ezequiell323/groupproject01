@@ -93,7 +93,9 @@ function showPosition(position) {
 */
 
 //Jose code
-//$(document).ready(function(){
+// Jose code
+
+// $(document).ready(function(){
 //Get value on button click and show alert
 $("#citySubmit").click(function(){
   var cityName = $("#cityInput").val();
@@ -118,9 +120,12 @@ success: function (response) {
    var time = response._embedded.events[i].dates.start.localTime;
 
    //Create Master Element and Append to container
-   $(".containerRowTwo").append(" <div class='col-4 mb-3'> <div class='card'> <img height='300' width='auto' src='" + image + "'class='card-img-top alt='...'><div class='card-body'><h5 id='firstSpot'class='card-title'>" + name + "</h5><p  class='card-text'>" + date + " " + time + "</p><a href='#' class='btn btn-warning'>Go somewhere</a></div> </div></div>");
-});
-});
+   $(".containerRow").append(" <div class='col-4 mb-3'> <div class='card'> <img height='300' width='auto' src='" + image + "'class='card-img-top alt='...'><div class='card-body'><h5 id='firstSpot'class='card-title'>" + name + "</h5><p  class='card-text'>" + date + " " + time + "</p><a href='#' class='btn btn-warning'>Go somewhere</a></div> </div></div>");
+}; 
+
+}});
+})
+
 
 
 //getLocation()
