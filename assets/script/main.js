@@ -3,6 +3,47 @@ $("#nearMe").click(function(){
   $("#landPageHolder").hide();
 });
 
+$("#findCity").on("click", function(e){
+  e.preventDefault();
+  $(".containerRowTwo").text("");
+  
+    var cityInput = $("#cityInput").val();
+    console.log(cityInput);
+  
+    var city=cityInput;
+  
+    //if (city) {
+      var queryURL="https://app.ticketmaster.com/discovery/v2/events.json?city="+city+"&apikey=cCh76O7Ve0ZGF8uXq89VksBzFEZGrmOt";
+    //} else {
+    //  var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=334&apikey=cCh76O7Ve0ZGF8uXq89VksBzFEZGrmOt&latlong=" + latlong;
+    //}
+    
+    // From TicketMaster's API page:
+    $.ajax({
+      type: "GET",
+      url: queryURL,
+      async: true,
+      dataType: "json",
+    
+      success: function (response) {
+    
+        for (var i = 0; i < response._embedded.events.length; i++) {
+    
+          var image = response._embedded.events[i].images[0].url;
+          var name = response._embedded.events[i].name;
+          var date = response._embedded.events[i].dates.start.localDate;
+          var time = response._embedded.events[i].dates.start.localTime;
+    
+          //Create Master Element and Append to container
+          $(".containerRow").append(" <div class='col-4 mb-3'> <div class='card'> <img height='300' width='auto' src='" + image + "'class='card-img-top alt='...'><div class='card-body'><h5 id='firstSpot'class='card-title'>" + name + "</h5><p  class='card-text'>" + date + " " + time + "</p><a href='#' class='btn btn-warning'>Go somewhere</a></div> </div></div>");
+    
+        };
+      }
+    
+    })
+  
+  });
+
 $("#searchCity").click(function(){ 
   $("#searchCityholder").show();
   $("#landPageHolder").hide();
@@ -30,7 +71,7 @@ $.ajax({
     var telephone = response.businesses[i].display_phone;
 
     //Create Master Element and Append to container
-    $(".containerRow").append(" <div class='col-4 mb-3'> <div class='card'> <img height='300' width='auto' src='" + image + "'class='card-img-top alt='...'> <div class='card-body'><h5 id='firstSpot'class='card-title'>" + name + "</h5><p  class='card-text'>" + address + " " + telephone + "</p><a href='#' class='btn btn-warning'>Go somewhere</a></div> </div></div>");
+    $(".containerTwo").append(" <div class='col-4 mb-3'> <div class='card'> <img height='300' width='auto' src='" + image + "'class='card-img-top alt='...'> <div class='card-body'><h5 id='firstSpot'class='card-title'>" + name + "</h5><p  class='card-text'>" + address + " " + telephone + "</p><a href='#' class='btn btn-warning'>Go somewhere</a></div> </div></div>");
   };
 });
 //Eze code
