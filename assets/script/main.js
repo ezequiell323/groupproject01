@@ -106,6 +106,8 @@ getLocation();
 
 
   $("#landPageHolder").hide();
+  $("#searchCityholder").show();
+
 });
 
 $("#findCity").on("click", function(e){
