@@ -26,9 +26,20 @@ $.ajax({
       var name = response._embedded.events[i].name;
       var date = response._embedded.events[i].dates.start.localDate;
       var time = response._embedded.events[i].dates.start.localTime;
+      var url = response._embedded.events[i].url;
 
-      //Create Master Element and Append to container
-      $(".containerRow").append(" <div class='col-xl-4 col-lg-4 col-md-6 col-12'> <div class='card'> <img height='300' width='auto' src='" + image + "'class='card-img-top alt='...'><div class='card-body'><h5 id='firstSpot'class='card-title'>" + name + "</h5><p  class='card-text'>" + date + " " + time + "</p><a href='#' class='btn btn-warning'>Go somewhere</a></div> </div></div>");
+          var info;
+
+          if (info = response._embedded.events[i].info === undefined) {
+            info = ""
+          } else {
+            info = response._embedded.events[i].info;
+          }
+
+          
+
+          //Create Master Element and Append to container
+          $(".containerRowTwo").append(" <div class='col-4 mb-3'> <div class='card'> <img height='300' width='auto' src='"+ image + "'class='card-img-top alt='...'><div class='card-body'><h5 id='firstSpot'class='card-title'>" + name + "</h5><p  class='card-text'>" + date + " " + time + " " + info +"</p><a target='_blank'href="+url+" class='btn btn-warning'>Buy your tickets</a></div> </div></div>");
 
     };
   }
@@ -140,9 +151,20 @@ $("#findCity").on("click", function(e){
           var name = response._embedded.events[i].name;
           var date = response._embedded.events[i].dates.start.localDate;
           var time = response._embedded.events[i].dates.start.localTime;
-    
+          var url = response._embedded.events[i].url;
+
+          var info;
+
+          if (info = response._embedded.events[i].info === undefined) {
+            info = ""
+          } else {
+            info = response._embedded.events[i].info;
+          }
+
+          
+
           //Create Master Element and Append to container
-          $(".containerRow").append(" <div class='col-xl-4 col-lg-4 col-md-6 col-12'> <div class='card'> <img height='300' width='auto' src='" + image + "'class='card-img-top alt='...'><div class='card-body'><h5 id='firstSpot'class='card-title'>" + name + "</h5><p  class='card-text'>" + date + " " + time + "</p><a href='#' class='btn btn-warning'>Go somewhere</a></div> </div></div>");
+          $(".containerRowTwo").append(" <div class='col-4 mb-3'> <div class='card'> <img height='300' width='auto' src='"+ image + "'class='card-img-top alt='...'><div class='card-body'><h5 id='firstSpot'class='card-title'>" + name + "</h5><p  class='card-text'>" + date + " " + time + " " + info +"</p><a target='_blank'href="+url+" class='btn btn-warning'>Buy your tickets</a></div> </div></div>");
           $(".ticketMaster").removeClass("loader")
         };
       }
