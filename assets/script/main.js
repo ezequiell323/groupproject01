@@ -1,5 +1,5 @@
 //var city=$("#city").val();
-//var zipCode=$("#zipCode").val();
+
 var city="new york";
 var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=burgers&location="+city;
 
@@ -33,7 +33,8 @@ function getLocation() {
   }
 }
 function showPosition(position) {
-
+  
+  
 
   //Call Ticket Master API
   latlong = position.coords.latitude + position.coords.longitude;
@@ -49,7 +50,15 @@ if (city) {
   var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=334&apikey=cCh76O7Ve0ZGF8uXq89VksBzFEZGrmOt&latlong=" + latlong;
 }
 
+$("#nearMe").val();
+
+
+
 // From TicketMaster's API page:
+
+var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&dmaId=334&apikey=cCh76O7Ve0ZGF8uXq89VksBzFEZGrmOt&city=" + city;
+
+
 $.ajax({
   type: "GET",
   url: queryURL,
