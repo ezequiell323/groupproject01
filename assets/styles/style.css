@@ -40,11 +40,34 @@ body {
 
 
 #nearMeIcon {
-  color: orange;
+  color: black;
   height: 25px;
   width: 25px;
   margin-bottom: 7px;
+  margin-right: 10px;
   
+}
+
+#searchIcon {
+  color: black;
+  height: 25px;
+  width: 25px;
+  margin-bottom: 7px;
+  margin-right: 10px;
+  
+}
+
+#searchIcon2 {
+  color: black;
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+  
+}
+
+#findCity {
+  text-align: center;
+  color: black;
 }
 
 #footer{

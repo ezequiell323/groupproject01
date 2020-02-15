@@ -23,26 +23,26 @@
       <!--USER INPUT CITY-->
       
         <div class="row">
-            <div class="offset 1 col-xl-6 col-lg-6 col-md-6 col-6">
-              <div class=" input-group mb-3">
-                <button type="button" class="btn btn-warning btn-lg btn-block" id="searchCity" onclick="">Search City</button>
-              </div>
-            </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-6">
-                  <button type="button" class="btn btn-warning btn-lg btn-block" id="nearMe" onclick="">Near Me</button>
-              </div>
+          <div class="offset 1 col-xl-6 col-lg-6 col-md-4 col-sm-3">
+            <div class=" input-group mb-3">
+              <button type="button" class="btn btn-warning btn-lg btn-block" id="searchCity" onclick=""><i id="searchIcon" class="fa fa-search" aria-hidden="true"></i>Search City</button>
             </div>
           </div>
+          <div class="col-xl-6 col-lg-6 col-md-4 col-sm-3">
+            <button type="button" class="btn btn-warning btn-lg btn-block" id="nearMe"><i id="nearMeIcon" class="fa fa-map-marker" aria-hidden="true"></i>Near Me</button>
+          </div>
+        </div>
+      </div>
       
 
-        <br>
+    <br>
 
         <div id="searchCityholder">
           <div class="offset-2 col-8 offset-2">
               <div class="input-group mb-3">
                 <input id="cityInput" type="text" class="form-control" placeholder="City" aria-label="Recipient's username" aria-describedby="button-addon2" id="city">
                 <div class="input-group-append">
-                  <button class="btn btn-warning btn-outline-secondary" type="button" id="findCity" >Submit</button>
+                  <button class="btn btn-warning btn-outline-secondary" type="button" id="findCity"><i id="searchIcon2" class="fa fa-search" aria-hidden="true"></i>Submit</button>
                 </div>
               </div>
            </div> 
@@ -50,7 +50,7 @@
       <!--NEAR ME-->         
              
            
-      </div>
+    </div>
      
       <!--NEAR ME-->
   
@@ -59,20 +59,28 @@
 
 
 <div class="ticketMaster"></div>
-  <div class="row containerRow">
+  
+    <div class="row containerRow">
     
     
     
-  </div>
+    </div>
+  
+
+
+ 
+  
+    <div class="row containerRowTwo"></div>
+  
+
   
 
 
   
+  
 
   
-  
-  <div class="row containerRowTwo"></div>
-  
+
 
 
 </div>
@@ -84,7 +92,7 @@
     <script src="assets/script/main.js"></script>
   
   
-    <div id="footer1" class="footer">
+    <div id="footer" class="footer">
       <p>Copyright 2020, Event Splash</p>
     </div>
 
