@@ -1,9 +1,12 @@
-$(".main.js").hide();
-$("#landPageHolder").click(function(){
-  event.preventDefault();
-  $(this).hide();
+$("#searchCityholder").hide()
+$("#nearMe").click(function(){ 
+  $("#landPageHolder").hide();
 });
 
+$("#searchCity").click(function(){ 
+  $("#searchCityholder").show();
+  $("#landPageHolder").hide();
+});
 
 //var city=$("#city").val();
 //var zipCode=$("#zipCode").val();
