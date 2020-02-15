@@ -57,6 +57,19 @@ body {
   
 }
 
+#searchIcon2 {
+  color: black;
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+  
+}
+
+#findCity {
+  text-align: center;
+  color: black;
+}
+
 #footer{
 color: white;
 }
