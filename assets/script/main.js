@@ -1,21 +1,4 @@
-$("#searchCityholder").hide()
-$("#nearMe").click(function(){ 
-
-$(".ticketMaster").addClass("loader")
-
-//Get Location
-
-function getLocation() {
-  // Make sure browser supports this feature
-  if (navigator.geolocation) {
-    // Provide our showPosition() function to getCurrentPosition
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } 
-  else {
-    alert("Geolocation is not supported by this browser.");
-  }
-}
-
+$("#searchCityholder").hide();
 // This will get called after getCurrentPosition()
 function showPosition(position) {
   // Grab coordinates from the given object
@@ -63,6 +46,25 @@ $.ajax({
   console.log(lon);
 
 }
+function getLocation() {
+  // Make sure browser supports this feature
+  if (navigator.geolocation) {
+    // Provide our showPosition() function to getCurrentPosition
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } 
+  else {
+    alert("Geolocation is not supported by this browser.");
+  }
+}
+$("#nearMe").click(function(){ 
+
+$(".ticketMaster").addClass("loader")
+
+//Get Location
+
+
+
+
 
 // function redirect(lat, lon) {
 //   // Compare latitude and longitude values
