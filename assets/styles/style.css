@@ -11,7 +11,7 @@ body {
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  margin-left: 750px;
+  margin: auto;
   animation: spin 2s linear infinite;
 }
 
@@ -75,13 +75,12 @@ color: white;
 }
 
 #footer1{
-  position: fixed;
-  left: 0;
-  bottom: 0;
+
   width: 100%;
   background-color: transparent;
   color: white;
   text-align: center;
+  margin-top: 50px;;
 }
 
 .capital{
@@ -106,6 +105,7 @@ P{
     
     text-align: center;
     background-color: black;
+    min-height: 500px;
   }
 
  
@@ -125,7 +125,7 @@ P{
 
   .card-body{
     background-color: black;
-    height: 250px;
+    height: 300px;
   }
 
   .card-text {
@@ -135,10 +135,12 @@ P{
 
   .footer {
     
-    left: 0;
-    bottom: 0;
+   
     width: 100%;
     background-color: transparent;
     color: white;
     text-align: center;
+  }
+  .card {
+    margin-bottom: 20px;
   }
