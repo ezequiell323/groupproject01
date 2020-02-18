@@ -53,9 +53,18 @@ getLocation();
   $("#landPageHolder").hide();
   $("#searchCityholder").show();
 });
+$("#nearMe2").click(function(e){ 
+  e.preventDefault();
+  $(".ticketMaster").addClass("loader");
+  $(".containerRowTwo").text("");
+  //Get Location
+  getLocation();
+    $("#landPageHolder").hide();
+    $("#searchCityholder").show();
+  });
 $("#findCity").on("click", function(e){
   e.preventDefault();
-  $(".ticketMaster").addClass("loader")
+  $(".ticketMaster").addClass("loader");
   $(".containerRowTwo").text("");
   
     var cityInput = $("#cityInput").val();
