@@ -13,6 +13,7 @@ $.ajax({
   async: true,
   dataType: "json",
   success: function (response) {
+    console.log(response);
     $(".ticketMaster").removeClass("loader")
     for (var i = 0; i < response._embedded.events.length; i++) {
       var image = response._embedded.events[i].images[0].url;
@@ -28,7 +29,7 @@ $.ajax({
           }
           
           //Create Master Element and Append to container
-          $(".containerRowTwo").append(" <div class='col-xl-4 col-lg-4 col-md-6 col-12'> <div class='card'> <img height='300' width='auto' src='"+ image + "'class='card-img-top alt='...'><div class='card-body'><h5 id='firstSpot'class='card-title'>" + name + "</h5><p  class='card-text'>" + date + " " + time + " " + info +"</p><a target='_blank'href="+url+" class='btn btn-warning'>Buy your tickets</a></div> </div></div>");
+          $(".containerRowTwo").append(" <div class='col-xl-4 col-lg-4 col-md-6 col-12'> <div class='card'> <img height='300' width='auto' src='"+ image + "'class='card-img-top alt='...'><div class='card-body'><h5 id='firstSpot'class='card-title'>" + name + "</h5><p  class='card-text'>" + date + " " + time + " " + info +"</p><a target='_blank'href="+ url +" class='btn btn-warning'>Buy your tickets</a></div> </div></div>");
     };
   }
 })
