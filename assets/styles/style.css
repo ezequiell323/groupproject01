@@ -70,6 +70,15 @@ body {
   color: black;
 }
 
+#nearME2 {
+  text-align: center;
+  color: black;
+}
+
+#nearMeIcon2 {
+  margin-right: 10px;
+}
+
 #footer{
 color: white;
 }
