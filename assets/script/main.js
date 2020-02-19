@@ -1,3 +1,6 @@
+var city;
+
+$(".containerTwo").hide();
 $("#searchCityholder").hide();
 // This will get called after getCurrentPosition()
 function showPosition(position) {
@@ -47,7 +50,8 @@ function getLocation() {
   }
 }
 $("#nearMe").click(function(){ 
-$(".ticketMaster").addClass("loader")
+  $(".ticketMaster").addClass("loader")
+
 //Get Location
 getLocation();
   $("#landPageHolder").hide();
@@ -55,6 +59,7 @@ getLocation();
 });
 $("#nearMe2").click(function(e){ 
   e.preventDefault();
+  $("#resultYelp").hide();
   $(".ticketMaster").addClass("loader");
   $(".containerRowTwo").text("");
   //Get Location
@@ -70,7 +75,7 @@ $("#findCity").on("click", function(e){
     var cityInput = $("#cityInput").val();
     console.log(cityInput);
   
-    var city=cityInput;
+   city=cityInput;
   
     
       var queryURL="https://app.ticketmaster.com/discovery/v2/events.json?city="+city+"&apikey=cCh76O7Ve0ZGF8uXq89VksBzFEZGrmOt";
@@ -108,18 +113,25 @@ $("#findCity").on("click", function(e){
   
   });
 $("#searchCity").click(function(){ 
+  
   $("#searchCityholder").show();
   $("#landPageHolder").hide();
 });
 function openYelp(){
-  window.open('second.html')
+  //window.open('second.html')
+  loadRestaurant();
+  $(".ticketMaster").addClass("loader")
+
+  $(".containerRowTwo").hide();
+  $(".containerTwo").show();
 }
 
 
-
+function loadRestaurant() {
 //Yelp code Api starts here
-var city="miami";
+city = $("#cityInput").val();
 var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=burgers&location="+city;
+console.log(queryURL);
 $.ajax({
   url: queryURL,
   method: "GET",
@@ -136,5 +148,7 @@ $.ajax({
     var telephone = response.businesses[i].display_phone;
     //Create Master Element and Append to container
     $(".containerTwo").append(" <div class='col-xl-4 col-lg-4 col-md-6 col-12'> <div class='card'> <img height='300' width='auto' src='" + image + "'class='card-img-top alt='...'> <div class='card-body'><h5 id='firstSpot'class='card-title'>" + name + "</h5><p  class='card-text'>" + address + " " + telephone + "</p><a href='#' class='btn btn-warning'>Go somewhere</a></div> </div></div>");
+    $(".ticketMaster").removeClass("loader")
   };
 });
+}
