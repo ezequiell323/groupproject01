@@ -111,6 +111,12 @@ $("#searchCity").click(function(){
   $("#searchCityholder").show();
   $("#landPageHolder").hide();
 });
+function openYelp(){
+  window.open('second.html')
+}
+
+
+
 //Yelp code Api starts here
 var city="miami";
 var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=burgers&location="+city;
