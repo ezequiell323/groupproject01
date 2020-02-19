@@ -21,15 +21,24 @@ $.ajax({
       var date = response._embedded.events[i].dates.start.localDate;
       var time = response._embedded.events[i].dates.start.localTime;
       var url = response._embedded.events[i].url;
+      var city = response._embedded.events[i]._embedded.venues[i].city.name
           var info;
           if (info = response._embedded.events[i].info === undefined) {
             info = ""
           } else {
             info = response._embedded.events[i].info;
           }
+
+          document.getElementById("cityInput")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("cityInput").click();
+    }
+});
           
           //Create Master Element and Append to container
-          $(".containerRowTwo").append(" <div class='col-xl-4 col-lg-4 col-md-6 col-12'> <div class='card'> <img height='300' width='auto' src='"+ image + "'class='card-img-top alt='...'><div class='card-body'><h5 id='firstSpot'class='card-title'>" + name + "</h5><p  class='card-text'>" + date + " " + time + " " + info +"</p><a target='_blank'href="+ url +" class='btn btn-warning'>Buy your tickets</a></div> </div></div>");
+          $(".containerRowTwo").append(" <div class='col-xl-4 col-lg-4 col-md-6 col-12'> <div class='card'> <img height='300' width='auto' src='"+ image + "'class='card-img-top alt='...'><div class='card-body'><h5 id='firstSpot'class='card-title'>" + name + "</h5><p  class='card-text'>" + date + " " + time + " " + info +"</p><a target='_blank' href="+ url +" class='btn btn-warning'>Buy your tickets</a></div> </div></div>");
     };
   }
 })
